@@ -14,22 +14,17 @@ public class BoardVisibilityTest {
     private WebDriver driver;
 
     @Test
-    void testBoardIsVisible() throws InterruptedException {
+    void testBoardIsVisible() {
         driver = new ChromeDriver();
 
-        // 1. abrir homepage
         BattleshipHomePage home = new BattleshipHomePage(driver);
         home.open();
+        home.acceptCookiesIfPresent();
 
-        Thread.sleep(10000);
-
-        // 2. iniciar jogo
         home.clickPlayVsRobot();
 
-        Thread.sleep(10000);
-
-        // 3. validar tabuleiro
         GamePageMiguel game = new GamePageMiguel(driver);
+        game.enterNickname("Miguel");
 
         assertTrue(game.isBoardVisible());
     }
