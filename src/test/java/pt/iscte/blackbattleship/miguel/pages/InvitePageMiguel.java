@@ -12,7 +12,7 @@ public class InvitePageMiguel {
     private WebDriverWait wait;
 
     private final By inviteLink =
-            By.xpath("//*[contains(., 'papergames.io')]");
+            By.xpath("//*[starts-with(text(),'https://papergames.io')]");
 
     public InvitePageMiguel(WebDriver driver) {
         this.driver = driver;
@@ -21,8 +21,9 @@ public class InvitePageMiguel {
 
 
     public String getInviteLink() {
-        return wait.until(driver ->
-                driver.findElement(inviteLink).getText()
-        );
+        var element = wait.until(ExpectedConditions.visibilityOfElementLocated(inviteLink));
+
+        return (String) ((org.openqa.selenium.JavascriptExecutor) driver)
+                .executeScript("return arguments[0].textContent;", element);
     }
 }

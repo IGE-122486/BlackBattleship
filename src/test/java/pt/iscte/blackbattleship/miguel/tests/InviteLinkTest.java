@@ -4,6 +4,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pt.iscte.blackbattleship.miguel.pages.GamePageMiguel;
 import pt.iscte.blackbattleship.pages.BattleshipHomePage;
 import pt.iscte.blackbattleship.miguel.pages.InvitePageMiguel;
 
@@ -20,15 +21,22 @@ public class InviteLinkTest {
         BattleshipHomePage home = new BattleshipHomePage(driver);
         home.open();
 
-        Thread.sleep(6000);
+        // 1. cookies
+        home.acceptCookiesIfPresent();
 
+
+        // 2. clicar play with friend
         home.clickPlayWithFriend();
 
-        Thread.sleep(6000);
+        // 3. nickname
+        GamePageMiguel game = new GamePageMiguel(driver);
+        game.enterNickname("Miguel");
 
+        // 4. obter link
         InvitePageMiguel invitePage = new InvitePageMiguel(driver);
 
         String link = invitePage.getInviteLink();
+
         assertNotNull(link);
         assertTrue(link.contains("papergames.io"));
     }

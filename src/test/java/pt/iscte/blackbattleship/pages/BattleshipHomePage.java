@@ -18,7 +18,7 @@ public class BattleshipHomePage {
 
     private final By playVsRobotLink = By.xpath("//*[contains(text(), 'Play vs robot')]");
     private final By playWithFriendLink =
-            By.xpath("//*[contains(., 'Play with a friend')]"); // alterado por Miguel
+            By.xpath("//span[contains(., 'Play with a friend')]/ancestor::button");
     private final By rulesTitle = By.xpath("//*[contains(text(), 'Rules of Battleship game online')]");
 
     public void acceptCookiesIfPresent() {
@@ -60,7 +60,16 @@ public class BattleshipHomePage {
     }
 
     public void clickPlayWithFriend() {
-        wait.until(ExpectedConditions.elementToBeClickable(playWithFriendLink)).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(playWithFriendLink));
+
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(playWithFriendLink)).click();
+        } catch (Exception e) {
+            ((JavascriptExecutor) driver).executeScript(
+                    "arguments[0].click();",
+                    driver.findElement(playWithFriendLink)
+            );
+        }
     }
 
     public void scrollToRules() {
