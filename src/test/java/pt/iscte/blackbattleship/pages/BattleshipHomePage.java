@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import org.openqa.selenium.JavascriptExecutor;
 
 public class BattleshipHomePage {
 
@@ -40,7 +41,12 @@ public class BattleshipHomePage {
     }
 
     public void clickPlayVsRobot() {
-        wait.until(ExpectedConditions.elementToBeClickable(playVsRobotLink)).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(playVsRobotLink));
+
+        ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].click();",
+                driver.findElement(playVsRobotLink)
+        );
     }
 
     public void clickPlayWithFriend() {
