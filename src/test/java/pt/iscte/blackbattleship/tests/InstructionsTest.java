@@ -1,37 +1,35 @@
-package pt.iscte.blackbattleship;
+package pt.iscte.blackbattleship.tests;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pt.iscte.blackbattleship.pages.BattleshipHomePage;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class MainPageTest {
+public class InstructionsTest {
 
     private WebDriver driver;
-    private MainPage mainPage;
+    private BattleshipHomePage homePage;
 
     @BeforeEach
     void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
 
-        mainPage = new MainPage(driver);
-        mainPage.open();
+        homePage = new BattleshipHomePage(driver);
+        homePage.open();
     }
 
     @Test
-    void testOpenMainPage() {
-        assertTrue(mainPage.getTitle().contains("JetBrains"));
-    }
+    void testViewRules() {
+        homePage.scrollToRules();
 
-    @Test
-    void testSearchButtonOpensSearchInput() {
-        mainPage.clickSearch();
-
-        assertTrue(mainPage.isSearchInputVisible());
+        assertTrue(homePage.areRulesVisible());
+        assertTrue(homePage.pageContains("turn-based"));
+        assertTrue(homePage.pageContains("10x10 grid"));
     }
 
     @AfterEach

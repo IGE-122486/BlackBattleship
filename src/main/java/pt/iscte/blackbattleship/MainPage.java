@@ -2,6 +2,7 @@ package pt.iscte.blackbattleship;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -9,9 +10,14 @@ import java.time.Duration;
 public class MainPage {
 
     private final WebDriver driver;
+    private final WebDriverWait wait;
+
+    private final By searchButton = By.cssSelector("button[aria-label='Search']");
+    private final By searchInput = By.cssSelector("input[type='search']");
 
     public MainPage(WebDriver driver) {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public void open() {
@@ -23,18 +29,10 @@ public class MainPage {
     }
 
     public void clickSearch() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-
-        // espera até encontrar o botão e só depois clica
-        wait.until(d -> d.findElement(By.cssSelector("button[aria-label='Search']")));
-        driver.findElement(By.cssSelector("button[aria-label='Search']")).click();
+        wait.until(ExpectedConditions.elementToBeClickable(searchButton)).click();
     }
 
     public boolean isSearchInputVisible() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-
-        return wait.until(d ->
-                d.findElement(By.cssSelector("input[type='search']")).isDisplayed()
-        );
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(searchInput)).isDisplayed();
     }
 }
