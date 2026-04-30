@@ -14,7 +14,8 @@ public class BattleshipHomePage {
     private static final String BASE_URL = "https://papergames.io/en/battleship";
 
     private final By playVsRobotLink = By.xpath("//*[contains(text(), 'Play vs robot')]");
-    private final By playWithFriendLink = By.xpath("//*[contains(text(), 'Play with a friend')]");
+    private final By playWithFriendLink =
+            By.xpath("//*[contains(., 'Play with a friend')]"); // alterado por Miguel
     private final By rulesTitle = By.xpath("//*[contains(text(), 'Rules of Battleship game online')]");
 
     public BattleshipHomePage(WebDriver driver) {
@@ -40,6 +41,10 @@ public class BattleshipHomePage {
 
     public void clickPlayVsRobot() {
         wait.until(ExpectedConditions.elementToBeClickable(playVsRobotLink)).click();
+    }
+
+    public void clickPlayWithFriend() {
+        wait.until(ExpectedConditions.elementToBeClickable(playWithFriendLink)).click();
     }
 
     public void scrollToRules() {
