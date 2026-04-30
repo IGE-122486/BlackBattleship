@@ -14,22 +14,23 @@ public class StartGameTest {
     private WebDriver driver;
 
     @Test
-    void testStartNewGame() throws InterruptedException {
+    void testStartNewGame() {
         driver = new ChromeDriver();
 
-        // 1. abrir homepage (REUTILIZAS o código do colega)
         BattleshipHomePage home = new BattleshipHomePage(driver);
         home.open();
 
-        Thread.sleep(3000); //esperar para dar o consentimento no site
+        // 1. aceitar cookies automaticamente
+        home.acceptCookiesIfPresent();
 
-        // 2. iniciar jogo
+        // 2. clicar play vs robot
         home.clickPlayVsRobot();
 
-        Thread.sleep(2000);
-
-        // 3. validar que o jogo começou
+        // 3. inserir nickname automaticamente
         GamePageMiguel game = new GamePageMiguel(driver);
+        game.enterNickname("Miguel");
+
+        // 4. validar jogo
         assertTrue(game.isBoardVisible());
     }
 
