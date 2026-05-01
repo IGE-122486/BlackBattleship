@@ -5,17 +5,29 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import org.openqa.selenium.JavascriptExecutor;
 
 public class BattleshipHomePage {
 
     private final WebDriver driver;
     private final WebDriverWait wait;
 
+    private final By consentButton = By.xpath("//button[contains(., 'Consent')]");
+
     private static final String BASE_URL = "https://papergames.io/en/battleship";
 
     private final By playVsRobotLink = By.xpath("//*[contains(text(), 'Play vs robot')]");
-    private final By playWithFriendLink = By.xpath("//*[contains(text(), 'Play with a friend')]");
+    private final By playWithFriendLink =
+            By.xpath("//span[contains(., 'Play with a friend')]/ancestor::button");
     private final By rulesTitle = By.xpath("//*[contains(text(), 'Rules of Battleship game online')]");
+
+    public void acceptCookiesIfPresent() {
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(consentButton)).click();
+        } catch (Exception e) {
+            // se não aparecer, segue normalmente
+        }
+    }
 
     public BattleshipHomePage(WebDriver driver) {
         this.driver = driver;
@@ -39,7 +51,25 @@ public class BattleshipHomePage {
     }
 
     public void clickPlayVsRobot() {
-        wait.until(ExpectedConditions.elementToBeClickable(playVsRobotLink)).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(playVsRobotLink));
+
+        ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].click();",
+                driver.findElement(playVsRobotLink)
+        );
+    }
+
+    public void clickPlayWithFriend() {
+        wait.until(ExpectedConditions.presenceOfElementLocated(playWithFriendLink));
+
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(playWithFriendLink)).click();
+        } catch (Exception e) {
+            ((JavascriptExecutor) driver).executeScript(
+                    "arguments[0].click();",
+                    driver.findElement(playWithFriendLink)
+            );
+        }
     }
 
     public void scrollToRules() {
