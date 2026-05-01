@@ -46,4 +46,10 @@ public class RodrigoHomePageTest {
             driver.quit();
         }
     }
+    @Test
+    void us04_clickInstructionsOpensInstructions() {
+        homePage.clickInstructions();
+
+        assertTrue(homePage.instructionsPageOpened());
+    }
 }

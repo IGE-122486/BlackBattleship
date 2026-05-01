@@ -44,4 +44,15 @@ public class RodrigoHomePage {
                         || driver.getCurrentUrl().contains("battleship")
         );
     }
+    public void clickInstructions() {
+        wait.until(ExpectedConditions.elementToBeClickable(instructionsLink)).click();
+    }
+
+    public boolean instructionsPageOpened() {
+        return wait.until(driver ->
+                driver.getPageSource().toLowerCase().contains("instructions")
+                        || driver.getPageSource().toLowerCase().contains("rules")
+                        || driver.getPageSource().toLowerCase().contains("how to play")
+        );
+    }
 }
