@@ -18,6 +18,7 @@ public class GamePageMiguel {
 
     // locator do tabuleiro (ajusta com inspect!!)
     private final By board = By.cssSelector("table.table-board");
+    private final By boards = By.cssSelector("table.table-board"); //para ver a do adversário tmb
 
 
     public GamePageMiguel(WebDriver driver) {
@@ -27,6 +28,12 @@ public class GamePageMiguel {
 
     public boolean isBoardVisible() {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(board)).isDisplayed();
+    }
+
+    public boolean areBothBoardsVisible() {
+        return wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(
+                boards, 1
+        )) != null;
     }
 
     public void enterNickname(String name) {
