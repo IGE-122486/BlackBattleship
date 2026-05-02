@@ -21,3 +21,7 @@
 10. Como jogador, quero receber feedback quando o ataque falha.
 11. Como jogador, quero saber quando o jogo termina.
 12. Como jogador, quero ver se ganhei ou perdi a partida.
+13. Como jogador, quero que o sistema valide o nickname introduzido, para evitar nomes inválidos.
+14. Como jogador, quero que o sistema impeça o início do jogo sem inserir um nickname, para garantir que todos os jogadores são identificados.
+15. Como jogador, quero voltar à página inicial a partir do jogo, para poder reiniciar ou escolher outro modo de jogo.
+16. Como jogador, quero navegar entre diferentes páginas do jogo, para aceder facilmente às funcionalidades.
