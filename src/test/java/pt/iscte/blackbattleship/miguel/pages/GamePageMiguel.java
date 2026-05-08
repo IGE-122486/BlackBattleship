@@ -20,7 +20,6 @@ public class GamePageMiguel {
     private final By board = By.cssSelector("table.table-board");
     private final By boards = By.cssSelector("table.table-board"); //para ver a do adversário tmb
 
-
     public GamePageMiguel(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
