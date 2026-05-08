@@ -1,6 +1,6 @@
 package pt.iscte.blackbattleship.miguel.testsJavaDoc;
 
-import MiguelPages.UserStoryTest3Page;
+import MiguelPages.UserStory3;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,10 +15,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * Testes automáticos da UserStoryTest3.
  * US17 - Validar abertura da loja no site.
  */
-public class UserStoryTest3Test {
+public class UserStory3Test {
 
     private WebDriver driver;
-    private UserStoryTest3Page page;
+    private UserStory3 page;
 
     @BeforeEach
     void setup() {
@@ -27,7 +27,7 @@ public class UserStoryTest3Test {
 
         driver.manage().window().maximize();
 
-        page = new UserStoryTest3Page(driver);
+        page = new UserStory3(driver);
     }
 
     /**

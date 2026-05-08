@@ -13,12 +13,12 @@ import java.time.Duration;
  * Page Object da UserStoryTest3.
  * US17 - Validar abertura da loja no site.
  */
-public class UserStoryTest3Page {
+public class UserStory3 {
 
     private final WebDriver driver;
     private final WebDriverWait wait;
 
-    public UserStoryTest3Page(WebDriver driver) {
+    public UserStory3(WebDriver driver) {
 
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
