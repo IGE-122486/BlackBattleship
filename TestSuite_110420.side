@@ -1,0 +1,592 @@
+{
+  "id": "49fec046-d7f6-4b04-bf1c-641cd7556f5d",
+  "version": "2.0",
+  "name": "TestSuite_110420",
+  "url": "https://papergames.io/en/battleship",
+  "tests": [{
+    "id": "e4b4bd3a-4ccc-461f-88bc-4fa15b317cc5",
+    "name": "UserStoryTest1",
+    "commands": [{
+      "id": "d5b49778-aa4e-443a-92b5-d2b075a8bd5d",
+      "comment": "",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6030c2d-e17a-41b0-b75b-1cf1e47adb56",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1055x1096",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5757a13a-cb41-4c7e-8361-86db5ec624eb",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.fc-cta-do-not-consent",
+      "targets": [
+        ["css=.fc-cta-do-not-consent", "css:finder"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Do not consent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8fd28d5a-68cc-4374-bf04-83104751c77e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.fc-cta-do-not-consent",
+      "targets": [
+        ["css=.fc-cta-do-not-consent", "css:finder"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Do not consent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a62dfa64-0af3-423e-865a-1f89e0980b5f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fc-cta-do-not-consent > .fc-button-label",
+      "targets": [
+        ["css=.fc-cta-do-not-consent > .fc-button-label", "css:finder"],
+        ["xpath=//button[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Do not consent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f5b02a6-1a99-49ae-8da6-a6da5f8b950e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.w-100:nth-child(1) .flex-grow-1",
+      "targets": [
+        ["css=.w-100:nth-child(1) .flex-grow-1", "css:finder"],
+        ["xpath=//span[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9642775b-116c-4bde-bbb5-421b4368cfe3",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.w-100:nth-child(1) .flex-grow-1",
+      "targets": [
+        ["css=.w-100:nth-child(1) .flex-grow-1", "css:finder"],
+        ["xpath=//span[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ea64010-0f04-4cfe-88e2-6b2bec7ac7d0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.w-100:nth-child(2) > .btn .flex-grow-1",
+      "targets": [
+        ["css=.w-100:nth-child(2) > .btn .flex-grow-1", "css:finder"],
+        ["xpath=//app-juicy-button[2]/button/span[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "46be9bd5-50d9-47db-a11a-0cb274d0616d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.dialog-close .mat-mdc-button-touch-target",
+      "targets": [
+        ["css=.dialog-close .mat-mdc-button-touch-target", "css:finder"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/header/div/button/span[3]", "xpath:idRelative"],
+        ["xpath=//div/button/span[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef6205c1-d561-4912-afb8-0244d729c645",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.dialog-close .mat-mdc-button-touch-target",
+      "targets": [
+        ["css=.dialog-close .mat-mdc-button-touch-target", "css:finder"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/header/div/button/span[3]", "xpath:idRelative"],
+        ["xpath=//div/button/span[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c25539b-0138-48d4-907b-94fa281aa5b3",
+      "comment": "",
+      "command": "type",
+      "target": "css=.input-xl",
+      "targets": [
+        ["css=.input-xl", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/section/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Miguel"
+    }, {
+      "id": "5c6bfcd6-53b2-4022-988c-c432367f1c26",
+      "comment": "",
+      "command": "click",
+      "target": "css=.p-3 > .btn",
+      "targets": [
+        ["css=.p-3 > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/footer/button", "xpath:idRelative"],
+        ["xpath=//footer/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a81ef02e-229c-45c0-8407-3e1cea77b7ba",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.p-3 > .btn",
+      "targets": [
+        ["css=.p-3 > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/footer/button", "xpath:idRelative"],
+        ["xpath=//footer/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c8ea2a8-9ce5-430b-ba7a-bee9180b96c9",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=2000",
+      "targets": [
+        ["linkText=2000", "linkText"],
+        ["css=.credit-balance", "css:finder"],
+        ["xpath=//a[contains(@href, '/en/shop/virtual-coins')]", "xpath:href"],
+        ["xpath=//app-credit-balance/a", "xpath:position"],
+        ["xpath=//a[contains(.,'2000')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebf0ed90-1cda-43b3-af84-bc4ca1034bd5",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "609fa761-5a46-4346-a5a5-e7f140d592b1",
+      "comment": "US2 – Iniciar novo jogo",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6770ef14-97e9-4975-b18a-6f62bdb32876",
+    "name": "UserStoryTest2",
+    "commands": [{
+      "id": "8d9b7fb0-1611-4156-ad75-96a1079c5128",
+      "comment": "",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54a6adba-af4d-424d-aaaa-ac3532fd5ffb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1055x1096",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28efa548-7047-479d-aadb-a492409431cd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fc-cta-consent > .fc-button-label",
+      "targets": [
+        ["css=.fc-cta-consent > .fc-button-label", "css:finder"],
+        ["xpath=//button/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Consent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "81e7dd38-fd58-40c3-801c-b8581c5116be",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.position-relative > .front",
+      "targets": [
+        ["css=.position-relative > .front", "css:finder"],
+        ["xpath=//a/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9ae3bdc-6223-44b8-90c1-66044f2283ff",
+      "comment": "",
+      "command": "click",
+      "target": "css=.w-100:nth-child(1) .flex-grow-1",
+      "targets": [
+        ["css=.w-100:nth-child(1) .flex-grow-1", "css:finder"],
+        ["xpath=//span[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e8d7f9f-e4d4-410a-9a92-96e3ada52093",
+      "comment": "",
+      "command": "type",
+      "target": "css=.input-xl",
+      "targets": [
+        ["css=.input-xl", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/section/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Miguel"
+    }, {
+      "id": "47897ed6-89bf-40db-aa38-94dc49afdf69",
+      "comment": "",
+      "command": "click",
+      "target": "css=.p-3 > .btn",
+      "targets": [
+        ["css=.p-3 > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/footer/button", "xpath:idRelative"],
+        ["xpath=//footer/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f7335d8-2c8a-4703-b4d5-12527cad5c03",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=10",
+      "targets": [
+        ["index=10"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f8abcd8-cf2f-48ed-8e4b-f871b766ba2a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.continue-prompt-text",
+      "targets": [
+        ["css=.continue-prompt-text", "css:finder"],
+        ["xpath=//div[@id='dismiss-button-element']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "76d618ef-2a35-4d06-a5c2-e7a81c8298bc",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [
+        ["relative=parent"]
+      ],
+      "value": ""
+    }, {
+      "id": "84bb2b18-8451-4620-92c2-64ec95e6ca74",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=2000",
+      "targets": [
+        ["linkText=2000", "linkText"],
+        ["css=.credit-balance", "css:finder"],
+        ["xpath=//a[contains(@href, '/en/shop/virtual-coins')]", "xpath:href"],
+        ["xpath=//app-credit-balance/a", "xpath:position"],
+        ["xpath=//a[contains(.,'2000')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "299df34d-4410-4791-ab70-f76abe6d67ea",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be4090cc-3ed0-4f6e-adfc-bcc342d8843e",
+      "comment": "US4 – Criar link de convite",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "fd3c20f4-67c3-4746-8e45-e416f0f1fbf4",
+    "name": "UserStoryTest3",
+    "commands": [{
+      "id": "91ae3f6f-57ab-4e14-9e27-2cbe55f0977c",
+      "comment": "",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e644c543-db0b-419b-b0ea-c1a66322b813",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1055x1096",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3da04c23-1683-4424-982c-0d6d895ccb00",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.fc-cta-consent > .fc-button-label",
+      "targets": [
+        ["css=.fc-cta-consent > .fc-button-label", "css:finder"],
+        ["xpath=//button/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Consent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb9b6615-31a8-4727-9cc2-30754fb4480a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fc-cta-consent > .fc-button-label",
+      "targets": [
+        ["css=.fc-cta-consent > .fc-button-label", "css:finder"],
+        ["xpath=//button/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Consent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "156fcd37-93b4-4c56-96c5-801cf3e8d4d1",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Battleship",
+      "targets": [
+        ["linkText=Battleship", "linkText"],
+        ["css=.nav-link-active", "css:finder"],
+        ["xpath=//a[contains(@href, '/en/battleship')]", "xpath:href"],
+        ["xpath=//ul[3]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Battleship')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "14623d71-e658-4dd0-9ebc-6db6dc05dec3",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Battleship",
+      "targets": [
+        ["linkText=Battleship", "linkText"],
+        ["css=.nav-link-active", "css:finder"],
+        ["xpath=//a[contains(@href, '/en/battleship')]", "xpath:href"],
+        ["xpath=//ul[3]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Battleship')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4799f19c-aee4-4543-9d6c-cd1f99db34d9",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.d-flex > .fw-normal:nth-child(1)",
+      "targets": [
+        ["css=.d-flex > .fw-normal:nth-child(1)", "css:finder"],
+        ["xpath=//span[2]/span/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ae785df-8834-4a05-a1c2-4fb4d96a9b12",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.d-flex > .fw-normal:nth-child(1)",
+      "targets": [
+        ["css=.d-flex > .fw-normal:nth-child(1)", "css:finder"],
+        ["xpath=//span[2]/span/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4284148e-0db0-4bb8-b2aa-578a35595031",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Create tournament",
+      "targets": [
+        ["linkText=Create tournament", "linkText"],
+        ["css=.nav:nth-child(2) > .nav-item:nth-child(2) > .mat-mdc-tooltip-trigger", "css:finder"],
+        ["xpath=//a[contains(@href, '/en/t/create-tournament')]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c5b3405-b1d6-4c3c-9956-9a0f2d643f86",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.nav-item:nth-child(1) > .mat-mdc-tooltip-trigger", "css:finder"],
+        ["xpath=//a[contains(@href, '/en/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e445fa20-45e2-482b-b48e-bc25fd331431",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.nav-item:nth-child(1) > .mat-mdc-tooltip-trigger", "css:finder"],
+        ["xpath=//a[contains(@href, '/en/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb610bdb-1169-401e-9957-3ca56f02e987",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cdk-focused > .hide-if-collapsed",
+      "targets": [
+        ["css=.cdk-focused > .hide-if-collapsed", "css:finder"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd6625e2-4e32-4ae5-855e-5daa1faa0f70",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=10",
+      "targets": [
+        ["index=10"]
+      ],
+      "value": ""
+    }, {
+      "id": "0544e399-2f5a-4948-a483-d7109e65ae89",
+      "comment": "",
+      "command": "click",
+      "target": "css=.continue-prompt-text",
+      "targets": [
+        ["css=.continue-prompt-text", "css:finder"],
+        ["xpath=//div[@id='dismiss-button-element']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e796bf4-a670-4f3d-8490-48843f66f315",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [
+        ["relative=parent"]
+      ],
+      "value": ""
+    }, {
+      "id": "a039236d-ef57-4c30-90e8-29c9673fcb29",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Coins",
+      "targets": [
+        ["linkText=Coins", "linkText"],
+        ["css=.box-shadow-1:nth-child(1) > .btn", "css:finder"],
+        ["xpath=//a[contains(@href, '/en/shop/virtual-coins')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Coins')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0cc3d8f-ffd0-4691-a13b-8c4551b9f5f1",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce4482e7-13d7-4e5c-8b95-60a797502f6b",
+      "comment": "US17 - Validar abertura da loja no site",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "cd480351-25dc-4793-803f-292e7b029d1b",
+    "name": "UserStoryTest4",
+    "commands": [{
+      "id": "65e99ae4-2501-4744-ab31-d645fb1bb039",
+      "comment": "",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6b0fae7-51b2-47a7-bdb0-d5acae207c9a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1055x1096",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a85d325-f339-4352-9221-a72558c52fbc",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.d-none:nth-child(1) img",
+      "targets": [
+        ["css=.d-none:nth-child(1) img", "css:finder"],
+        ["xpath=//img[@alt='Get it on Playstore']", "xpath:img"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c4590d6-0232-4d72-a92a-f244562dc17a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fc-cta-consent > .fc-button-label",
+      "targets": [
+        ["css=.fc-cta-consent > .fc-button-label", "css:finder"],
+        ["xpath=//button/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Consent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6085498c-9811-4a66-8b9c-737b39e04edb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cdk-focused > .hide-if-collapsed",
+      "targets": [
+        ["css=.cdk-focused > .hide-if-collapsed", "css:finder"],
+        ["xpath=//ul[2]/li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'My tournaments')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6579ac75-9acf-4c92-8075-dd9954e91ed8",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=24",
+      "targets": [
+        ["index=24"]
+      ],
+      "value": ""
+    }, {
+      "id": "372ecbbd-c804-46d8-ba93-b7a73b94d605",
+      "comment": "",
+      "command": "click",
+      "target": "css=.continue-prompt-text",
+      "targets": [
+        ["css=.continue-prompt-text", "css:finder"],
+        ["xpath=//div[@id='dismiss-button-element']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0d777ce-1f77-42d0-b63a-f81bc88e9425",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2cf53df3-7ee7-4c19-b5ac-627a93cad978",
+      "comment": "US18 - Validar acesso aos meus torneios",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d69911a9-2cfd-4324-a326-f7092cf4c224",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://papergames.io/"],
+  "plugins": []
+}
