@@ -1,4 +1,4 @@
-package pt.iscte.blackbattleship.tests;
+package pt.iscte.blackbattleship.bart.tests;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,7 +9,7 @@ import pt.iscte.blackbattleship.pages.BattleshipHomePage;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class NicknameTest {
+public class AttackTest {
 
     private WebDriver driver;
     private BattleshipHomePage homePage;
@@ -24,10 +24,13 @@ public class NicknameTest {
     }
 
     @Test
-    void testNicknameFeatureIsAvailable() {
-        assertTrue(homePage.pageContains("nickname")
-                || homePage.pageContains("name")
-                || homePage.pageContains("player"));
+    void testAttackFeatureIsDescribedInRules() {
+        homePage.scrollToRules();
+
+        assertTrue(homePage.pageContains("sink")
+                || homePage.pageContains("shoot")
+                || homePage.pageContains("hit")
+                || homePage.pageContains("ships"));
     }
 
     @AfterEach
