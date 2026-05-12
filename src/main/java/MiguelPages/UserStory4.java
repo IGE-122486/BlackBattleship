@@ -26,7 +26,7 @@ public class UserStory4 {
             By.cssSelector(".fc-cta-consent > .fc-button-label");
 
     private final By tournamentsButton =
-            By.cssSelector(".cdk-focused > .hide-if-collapsed");
+            By.xpath("//span[contains(text(),'My tournaments')]");
 
     public void openPage() {
 
@@ -43,7 +43,7 @@ public class UserStory4 {
     public void openMyTournaments() {
 
         wait.until(
-                ExpectedConditions.elementToBeClickable(tournamentsButton)
+                ExpectedConditions.visibilityOfElementLocated(tournamentsButton)
         ).click();
     }
 

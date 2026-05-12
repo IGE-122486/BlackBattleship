@@ -30,10 +30,10 @@ public class UserStory3 {
             By.cssSelector(".fc-cta-consent > .fc-button-label");
 
     private final By shopButton =
-            By.cssSelector(".cdk-focused > .hide-if-collapsed");
+            By.xpath("//span[contains(text(),'Shop')]");
 
     private final By coinsButton =
-            By.linkText("Coins");
+            By.xpath("//a[contains(.,'Coins')]");;
 
     /**
      * Abre a página principal do jogo.
@@ -61,13 +61,10 @@ public class UserStory3 {
     public void openShop() {
 
         WebElement button = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(shopButton)
+                ExpectedConditions.elementToBeClickable(shopButton)
         );
 
-        ((JavascriptExecutor) driver).executeScript(
-                "arguments[0].click();",
-                button
-        );
+        button.click();
     }
 
     /**
@@ -75,9 +72,16 @@ public class UserStory3 {
      */
     public boolean isCoinsButtonVisible() {
 
-        return wait.until(
-                ExpectedConditions.visibilityOfElementLocated(coinsButton)
-        ).isDisplayed();
+        try {
+
+            return wait.until(
+                    ExpectedConditions.visibilityOfElementLocated(coinsButton)
+            ).isDisplayed();
+
+        } catch (Exception e) {
+
+            return false;
+        }
     }
 
     /**
