@@ -1,4 +1,4 @@
-package pt.iscte.blackbattleship.tests;
+package pt.iscte.blackbattleship.bart.tests;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,7 +9,7 @@ import pt.iscte.blackbattleship.pages.BattleshipHomePage;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class AttackTest {
+public class InstructionsTest {
 
     private WebDriver driver;
     private BattleshipHomePage homePage;
@@ -21,16 +21,17 @@ public class AttackTest {
 
         homePage = new BattleshipHomePage(driver);
         homePage.open();
+        homePage.acceptCookiesIfPresent();
     }
 
     @Test
-    void testAttackFeatureIsDescribedInRules() {
+    void testViewRules() {
         homePage.scrollToRules();
 
-        assertTrue(homePage.pageContains("sink")
-                || homePage.pageContains("shoot")
-                || homePage.pageContains("hit")
-                || homePage.pageContains("ships"));
+        assertTrue(homePage.areRulesVisible());
+        assertTrue(homePage.pageContains("10x10 grid"));
+        assertTrue(homePage.pageContains("ships"));
+        assertTrue(homePage.pageContains("Hits are shown"));
     }
 
     @AfterEach
