@@ -1,6 +1,6 @@
 package pt.iscte.blackbattleship.miguel.testsJavaDoc;
 
-import MiguelPages.UserStory4;
+import Miguel.MiguelPages.UserStory4;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
