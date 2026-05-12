@@ -1,9 +1,8 @@
 package pt.iscte.blackbattleship.miguel.testsJavaDoc;
 
-import MiguelPages.UserStory3;
+import MiguelPages.UserStory18;
 
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import org.openqa.selenium.WebDriver;
@@ -12,45 +11,36 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * Testes automáticos da UserStoryTest3.
- * US17 - Validar abertura da loja no site.
+ * Teste automático da UserStoryTest4.
+ * US18 – Validar acesso aos meus torneios.
  */
-public class UserStory3Test {
+public class UserStory18Test {
 
     private WebDriver driver;
-    private UserStory3 page;
 
-    @BeforeEach
-    void setup() {
+    @Test
+    void testTournamentAccess() throws InterruptedException {
 
         driver = new ChromeDriver();
 
         driver.manage().window().maximize();
 
-        page = new UserStory3(driver);
-    }
+        UserStory18 page =
+                new UserStory18(driver);
 
-    /**
-     * Valida a abertura da loja.
-     */
-    @Test
-    void testOpenShop() throws InterruptedException {
-
-        page.openHomePage();
+        page.openPage();
 
         Thread.sleep(2000);
 
         page.acceptCookies();
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
-        page.openShop();
+        page.openMyTournaments();
 
         Thread.sleep(3000);
 
-        assertTrue(page.isShopPageOpened());
-
-        assertTrue(page.isCoinsButtonVisible());
+        assertTrue(page.tournamentsPageOpened());
     }
 
     @AfterEach
