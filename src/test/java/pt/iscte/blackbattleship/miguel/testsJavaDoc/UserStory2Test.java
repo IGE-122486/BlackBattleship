@@ -11,15 +11,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * Teste automático da UserStoryTest2.
- * US4 – Criar link de convite.
+ * Teste automático da UserStoryTest1.
+ * US2 – Iniciar novo jogo.
  */
 public class UserStory2Test {
 
     private WebDriver driver;
 
     @Test
-    void testInviteLink() throws InterruptedException {
+    void testStartNewGame() throws InterruptedException {
 
         driver = new ChromeDriver();
 
@@ -32,11 +32,11 @@ public class UserStory2Test {
 
         Thread.sleep(2000);
 
-        page.acceptCookies();
+        page.rejectCookies();
 
         Thread.sleep(1000);
 
-        page.clickPlayOnline();
+        page.clickPlay();
 
         Thread.sleep(1000);
 
@@ -48,7 +48,7 @@ public class UserStory2Test {
 
         Thread.sleep(3000);
 
-        assertTrue(page.inviteCreated());
+        assertTrue(page.gameStarted());
     }
 
     @AfterEach

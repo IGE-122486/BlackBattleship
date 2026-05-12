@@ -8,8 +8,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 /**
- * Page Object da UserStoryTest2.
- * US4 – Criar link de convite.
+ * Page Object da UserStoryTest1.
+ * US2 – Iniciar novo jogo.
  */
 public class UserStory2 {
 
@@ -23,10 +23,10 @@ public class UserStory2 {
     }
 
     private final By cookiesButton =
-            By.cssSelector(".fc-cta-consent > .fc-button-label");
+            By.cssSelector(".fc-cta-do-not-consent > .fc-button-label");
 
     private final By playButton =
-            By.cssSelector(".w-100:nth-child(1) .flex-grow-1");
+            By.cssSelector(".w-100:nth-child(2) > .btn .flex-grow-1");
 
     private final By nicknameInput =
             By.cssSelector(".input-xl");
@@ -39,14 +39,14 @@ public class UserStory2 {
         driver.get("https://papergames.io/en/battleship");
     }
 
-    public void acceptCookies() {
+    public void rejectCookies() {
 
         wait.until(
                 ExpectedConditions.elementToBeClickable(cookiesButton)
         ).click();
     }
 
-    public void clickPlayOnline() {
+    public void clickPlay() {
 
         wait.until(
                 ExpectedConditions.elementToBeClickable(playButton)
@@ -67,7 +67,7 @@ public class UserStory2 {
         ).click();
     }
 
-    public boolean inviteCreated() {
+    public boolean gameStarted() {
 
         return driver.getPageSource()
                 .toLowerCase()
