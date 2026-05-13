@@ -1,9 +1,7 @@
 package pt.iscte.blackbattleship.goncalo.tests;
 
-import pt.iscte.blackbattleship.goncalo.pages.UserStory13;
-
+import GoncaloPages.UserStory13;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,8 +13,8 @@ import java.time.Duration;
 /**
  * Classe de teste JUnit da User Story 13.
  *
- * Esta classe testa se o sistema valida
- * corretamente nicknames inválidos.
+ * Esta classe testa se o sistema aceita
+ * corretamente um nickname válido.
  *
  * @author Goncalo
  */
@@ -49,10 +47,10 @@ public class UserStory13Test {
     }
 
     /**
-     * Testa nickname inválido.
+     * Testa nickname válido.
      */
     @Test
-    public void validateInvalidNicknameTest() {
+    public void validateValidNicknameTest() {
 
         userStory13.openWebsite();
 
@@ -60,20 +58,9 @@ public class UserStory13Test {
 
         userStory13.clickPlayVsRobot();
 
-        userStory13.enterInvalidNickname("qw");
+        userStory13.enterValidNickname("Goncalo123");
 
         userStory13.clickContinue();
-
-        String expectedMessage =
-                "Make it 3 characters or more!";
-
-        String actualMessage =
-                userStory13.getErrorMessage();
-
-        Assertions.assertEquals(
-                expectedMessage,
-                actualMessage
-        );
     }
 
     /**

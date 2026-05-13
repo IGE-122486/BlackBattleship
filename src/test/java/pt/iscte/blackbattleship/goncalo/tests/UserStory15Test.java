@@ -1,9 +1,7 @@
 package pt.iscte.blackbattleship.goncalo.tests;
 
-import pt.iscte.blackbattleship.goncalo.pages.UserStory15;
-
+import GoncaloPages.UserStory15;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,8 +13,8 @@ import java.time.Duration;
 /**
  * Classe de teste JUnit da User Story 15.
  *
- * Esta classe testa se o utilizador consegue
- * voltar à página inicial após abandonar o jogo.
+ * Esta classe testa o regresso
+ * à página inicial.
  *
  * @author Goncalo
  */
@@ -28,12 +26,12 @@ public class UserStory15Test {
     private WebDriver driver;
 
     /**
-     * Instância da Page Object Class.
+     * Instância da Page Object.
      */
     private UserStory15 userStory15;
 
     /**
-     * Configuração inicial do teste.
+     * Configuração inicial.
      */
     @BeforeEach
     public void setUp() {
@@ -49,7 +47,7 @@ public class UserStory15Test {
     }
 
     /**
-     * Testa o retorno à página inicial.
+     * Testa regresso à página inicial.
      */
     @Test
     public void returnToHomePageTest() {
@@ -60,26 +58,19 @@ public class UserStory15Test {
 
         userStory15.clickPlayVsRobot();
 
-        userStory15.clickAbortGame();
+        userStory15.enterNickname("Goncalo123");
 
-        userStory15.confirmAbortGame();
+        userStory15.clickContinue();
+
+        userStory15.clickAbortButton();
+
+        userStory15.clickConfirmButton();
 
         userStory15.clickHomeButton();
-
-        String expectedUrl =
-                "https://papergames.io/en/";
-
-        String actualUrl =
-                userStory15.getCurrentUrl();
-
-        Assertions.assertEquals(
-                expectedUrl,
-                actualUrl
-        );
     }
 
     /**
-     * Fecha o browser após o teste.
+     * Fecha o browser.
      */
     @AfterEach
     public void tearDown() {

@@ -1,4 +1,4 @@
-package pt.iscte.blackbattleship.goncalo.pages;
+package GoncaloPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
  * Page Object Class da User Story 13.
  *
  * Esta classe contém os localizadores e operações
- * necessárias para validar nicknames inválidos.
+ * necessárias para validar um nickname válido.
  *
  * User Story 13:
  * "Como jogador, quero que o sistema valide
@@ -32,7 +32,7 @@ public class UserStory13 {
      * Localizador do botão Play vs Robot.
      */
     private final By playVsRobotButton =
-            By.cssSelector(".w-100:nth-child(1) > .btn");
+            By.cssSelector(".w-100:nth-child(2) > .btn > .front");
 
     /**
      * Localizador do campo nickname.
@@ -47,12 +47,6 @@ public class UserStory13 {
             By.cssSelector(".p-3 > .btn");
 
     /**
-     * Localizador da mensagem de erro.
-     */
-    private final By errorMessage =
-            By.cssSelector(".text-center");
-
-    /**
      * Construtor da classe.
      *
      * @param driver WebDriver utilizado
@@ -65,6 +59,7 @@ public class UserStory13 {
      * Abre o website PaperGames.
      */
     public void openWebsite() {
+
         driver.get("https://papergames.io/en/");
     }
 
@@ -72,6 +67,7 @@ public class UserStory13 {
      * Seleciona o jogo Battleship.
      */
     public void selectBattleshipGame() {
+
         driver.findElement(battleshipGame).click();
     }
 
@@ -79,15 +75,16 @@ public class UserStory13 {
      * Seleciona a opção Play vs Robot.
      */
     public void clickPlayVsRobot() {
+
         driver.findElement(playVsRobotButton).click();
     }
 
     /**
-     * Introduz nickname inválido.
+     * Introduz nickname válido.
      *
-     * @param nickname nickname inválido
+     * @param nickname nickname válido
      */
-    public void enterInvalidNickname(String nickname) {
+    public void enterValidNickname(String nickname) {
 
         driver.findElement(nicknameField)
                 .sendKeys(nickname);
@@ -100,16 +97,5 @@ public class UserStory13 {
 
         driver.findElement(continueButton)
                 .click();
-    }
-
-    /**
-     * Obtém a mensagem de erro.
-     *
-     * @return texto da mensagem
-     */
-    public String getErrorMessage() {
-
-        return driver.findElement(errorMessage)
-                .getText();
     }
 }
