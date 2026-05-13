@@ -1,0 +1,394 @@
+{
+  "id": "2222c60e-6d8a-432f-becd-bbb39b9b6a1e",
+  "version": "2.0",
+  "name": "TestSuite_122486",
+  "url": "https://papergames.io",
+  "tests": [{
+    "id": "975cbf37-2445-4fef-9baa-44794510cd44",
+    "name": "UserStory13Test",
+    "commands": [{
+      "id": "3aa5c009-5e8c-4ac7-ab73-65366ee30a4d",
+      "comment": "Abertura do papergames.io",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72b6ebcb-566e-4275-8801-839defd29d97",
+      "comment": "Ajustar tamanho da janela",
+      "command": "setWindowSize",
+      "target": "1536x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "744c8506-f1cb-4296-a80e-dee2af879cfd",
+      "comment": "Selecionar modo battleship",
+      "command": "click",
+      "target": "css=.game-item:nth-child(1) .img-fluid",
+      "targets": [
+        ["css=.game-item:nth-child(1) .img-fluid", "css:finder"],
+        ["xpath=//img[@alt='Battleship']", "xpath:img"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4966bdd-dae4-44b8-aadc-b0239c465b97",
+      "comment": "Selecionar player vs robot",
+      "command": "click",
+      "target": "css=.w-100:nth-child(2) > .btn > .front",
+      "targets": [
+        ["css=.w-100:nth-child(2) > .btn > .front", "css:finder"],
+        ["xpath=//app-juicy-button[2]/button/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Play vs robot')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ad215ac-b845-464f-9c5e-024b31fc1f19",
+      "comment": "Escrever nome válido",
+      "command": "type",
+      "target": "css=.input-xl",
+      "targets": [
+        ["css=.input-xl", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/section/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Goncalo123"
+    }, {
+      "id": "9391195a-8987-4a0c-888c-3d9a44f31168",
+      "comment": "Clicar em continue apos escrever nome",
+      "command": "click",
+      "target": "css=.p-3 > .btn",
+      "targets": [
+        ["css=.p-3 > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/footer/button", "xpath:idRelative"],
+        ["xpath=//footer/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "17a41b92-c12c-4106-90bf-31577456b45d",
+    "name": "UserStory14Test",
+    "commands": [{
+      "id": "93fde8ff-1264-4df9-8648-da8f1fa84fc0",
+      "comment": "Abertura do papergames.io",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ffd7d37f-642b-4618-8b26-aae364adffe7",
+      "comment": "Ajuste da janela ",
+      "command": "setWindowSize",
+      "target": "1536x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d31d8721-5a3d-4b59-a5c0-990b41fb5cdd",
+      "comment": "Selecionar modo Tic Tac Toe",
+      "command": "click",
+      "target": "css=.game-item:nth-child(2) .text-light",
+      "targets": [
+        ["css=.game-item:nth-child(2) .text-light", "css:finder"],
+        ["xpath=//div[2]/a/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Tic Tac Toe')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f751df15-c3bb-4ea1-a1f3-ad524218a3ab",
+      "comment": "Selecionar modo jogo",
+      "command": "click",
+      "target": "css=.w-100:nth-child(2) > .btn .flex-grow-1",
+      "targets": [
+        ["css=.w-100:nth-child(2) > .btn .flex-grow-1", "css:finder"],
+        ["xpath=//app-juicy-button[2]/button/span[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a3efaad-2002-4ebd-a9aa-7d222960bfa9",
+      "comment": "Clicar em cancel",
+      "command": "click",
+      "target": "css=.cdk-focused > .mat-mdc-button-touch-target",
+      "targets": [
+        ["css=.cdk-focused > .mat-mdc-button-touch-target", "css:finder"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/header/div/button/span[3]", "xpath:idRelative"],
+        ["xpath=//div/button/span[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "8d6029da-5702-4e04-8f1c-90e5c39c5b59",
+    "name": "UserStory15Test",
+    "commands": [{
+      "id": "92fe02cd-ca8b-442f-9d9c-5f641f1b103f",
+      "comment": "Abertura do papergames.io",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b964fb84-15aa-46e1-89bf-3b77d6c3de08",
+      "comment": "Ajuste da janela ",
+      "command": "setWindowSize",
+      "target": "1536x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "261814c3-abec-4e1a-bfda-e87c32288949",
+      "comment": "Selecionar battleship",
+      "command": "click",
+      "target": "css=.game-item:nth-child(1) .img-fluid",
+      "targets": [
+        ["css=.game-item:nth-child(1) .img-fluid", "css:finder"],
+        ["xpath=//img[@alt='Battleship']", "xpath:img"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "81c1c8e4-b925-4061-aab7-a93b301520d0",
+      "comment": "Selecionar modo de jogo",
+      "command": "click",
+      "target": "css=.w-100:nth-child(2) > .btn > .front",
+      "targets": [
+        ["css=.w-100:nth-child(2) > .btn > .front", "css:finder"],
+        ["xpath=//app-juicy-button[2]/button/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Play vs robot')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3dd36408-863b-42fd-98ae-8e0a31c754ca",
+      "comment": "Escrever nome ",
+      "command": "type",
+      "target": "css=.input-xl",
+      "targets": [
+        ["css=.input-xl", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/section/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Goncalo123"
+    }, {
+      "id": "d76c04dd-341c-4883-9451-27c053c246d7",
+      "comment": "Selecionar continuar",
+      "command": "click",
+      "target": "css=.p-3 > .btn",
+      "targets": [
+        ["css=.p-3 > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/footer/button", "xpath:idRelative"],
+        ["xpath=//footer/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "29fd23a5-10a8-4669-a11f-28af835a5547",
+      "comment": "Abortar jogo",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//span/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Abort game')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "19df23f0-29d2-4018-8df5-b1307353522a",
+      "comment": "Confirmar ação",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp3']/div/div/app-confirm-leave-dialog/app-dialog-layout/div/footer/button[2]", "xpath:idRelative"],
+        ["xpath=//footer/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db467322-dc18-48bb-9192-3dd5d7bb1de7",
+      "comment": "Selecionar botão Home",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.cdk-focused", "css:finder"],
+        ["xpath=(//a[contains(@href, '/en/')])[4]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "c6aa98a1-2d24-4892-87f1-40f43c7c7bdb",
+    "name": "UserStory16Test",
+    "commands": [{
+      "id": "0709be82-c744-45a7-a6ed-3622b42a4b4c",
+      "comment": "Abertura do papergames.io",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7ea8ea0-d61e-4f06-a1c3-52a3fcf90a28",
+      "comment": "Ajuste da janela ",
+      "command": "setWindowSize",
+      "target": "1536x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fef0e2a4-58cc-481b-91e1-d17b901f2336",
+      "comment": "Selecionar battleship",
+      "command": "click",
+      "target": "css=.game-item:nth-child(1) .img-fluid",
+      "targets": [
+        ["css=.game-item:nth-child(1) .img-fluid", "css:finder"],
+        ["xpath=//img[@alt='Battleship']", "xpath:img"],
+        ["xpath=//a/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e3d9818-50ba-4eac-bd9e-7593b4a89a1e",
+      "comment": "Selecionar home",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.cdk-focused", "css:finder"],
+        ["xpath=(//a[contains(@href, '/en/')])[4]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc0546d1-4ebb-496b-af53-623e27265a10",
+      "comment": "Selecionar tic tac toe",
+      "command": "click",
+      "target": "css=.game-item:nth-child(2) .img-fluid",
+      "targets": [
+        ["css=.game-item:nth-child(2) .img-fluid", "css:finder"],
+        ["xpath=//img[@alt='Tic Tac Toe']", "xpath:img"],
+        ["xpath=//div[2]/a/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "260b7dc8-531d-4a1c-9c32-3c8a13fe6eeb",
+      "comment": "Selecionar home",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.cdk-focused", "css:finder"],
+        ["xpath=(//a[contains(@href, '/en/')])[4]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1332c874-e86b-417d-b35c-fe60d85da2ab",
+      "comment": "Selecionar connect 4",
+      "command": "click",
+      "target": "css=.game-item:nth-child(3) .img-fluid",
+      "targets": [
+        ["css=.game-item:nth-child(3) .img-fluid", "css:finder"],
+        ["xpath=//img[@alt='Connect 4']", "xpath:img"],
+        ["xpath=//div[3]/a/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c69b156f-3c45-4b79-b362-6f179ca3bcc3",
+      "comment": "Selecionar home",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.cdk-focused", "css:finder"],
+        ["xpath=(//a[contains(@href, '/en/')])[4]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8cb3c3d9-cfcb-49dd-bd43-afb70abeb209",
+      "comment": "Selecionar gomoku",
+      "command": "click",
+      "target": "css=.game-item:nth-child(4) .img-fluid",
+      "targets": [
+        ["css=.game-item:nth-child(4) .img-fluid", "css:finder"],
+        ["xpath=//img[@alt='Gomoku']", "xpath:img"],
+        ["xpath=//div[4]/a/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dcc818b2-c5e2-4d9a-99ae-72097069cc9e",
+      "comment": "Selecionar home",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.cdk-focused", "css:finder"],
+        ["xpath=(//a[contains(@href, '/en/')])[4]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "30701e40-dd07-44cb-8581-5f26f7e49332",
+      "comment": "Selecionar chess",
+      "command": "click",
+      "target": "css=.game-item:nth-child(5) .thumbnail",
+      "targets": [
+        ["css=.game-item:nth-child(5) .thumbnail", "css:finder"],
+        ["xpath=//div[5]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48745a25-7d83-469c-be5a-7562f63bfc1a",
+      "comment": "Selecionar home",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.cdk-focused", "css:finder"],
+        ["xpath=(//a[contains(@href, '/en/')])[4]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7819eb8d-ffff-41d6-a19f-a8e2246eee22",
+      "comment": "Selecionar checkers",
+      "command": "click",
+      "target": "css=.game-item:nth-child(6) .img-fluid",
+      "targets": [
+        ["css=.game-item:nth-child(6) .img-fluid", "css:finder"],
+        ["xpath=//img[@alt='Checkers']", "xpath:img"],
+        ["xpath=//div[6]/a/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95c86cd9-f353-4627-882f-4bef2b65b0cb",
+      "comment": "Selecionar home",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.cdk-focused", "css:finder"],
+        ["xpath=(//a[contains(@href, '/en/')])[4]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d00cfe62-4206-4789-9be0-1c0a192b12d5",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://papergames.io/"],
+  "plugins": []
+}
