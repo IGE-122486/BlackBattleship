@@ -10,7 +10,6 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-
         <!-- Java -->
         <maven.compiler.release>17</maven.compiler.release>
 
@@ -22,14 +21,22 @@
         <selenium.version>4.20.0</selenium.version>
         <selenide.version>7.3.1</selenide.version>
         <allure.version>2.29.0</allure.version>
-
     </properties>
 
     <dependencies>
+
+        <!-- Selenium WebDriver -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
+        </dependency>
+
+        <!-- Selenide -->
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>${selenide.version}</version>
         </dependency>
 
         <!-- JUnit 5 -->
@@ -40,11 +47,12 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Selenide -->
+        <!-- Allure JUnit 5 -->
         <dependency>
-            <groupId>com.codeborne</groupId>
-            <artifactId>selenide</artifactId>
-            <version>${selenide.version}</version>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-junit5</artifactId>
+            <version>${allure.version}</version>
+            <scope>test</scope>
         </dependency>
 
         <!-- Allure Selenide -->
@@ -54,32 +62,30 @@
             <version>${allure.version}</version>
         </dependency>
 
-        <!-- Allure JUnit 5 -->
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-junit5</artifactId>
-            <version>${allure.version}</version>
-        </dependency>
-
     </dependencies>
 
     <build>
         <plugins>
 
-            <!-- Maven Surefire -->
+            <!-- Maven Surefire: runs JUnit tests and writes Allure results -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
                     <useModulePath>false</useModulePath>
+
                     <includes>
                         <include>**/*Test.java</include>
                     </includes>
+
+                    <systemPropertyVariables>
+                        <allure.results.directory>target/allure-results</allure.results.directory>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
 
-            <!-- Allure Maven -->
+            <!-- Allure Maven plugin: generates Allure reports -->
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>

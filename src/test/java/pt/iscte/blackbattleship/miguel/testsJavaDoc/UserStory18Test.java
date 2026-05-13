@@ -1,6 +1,6 @@
 package pt.iscte.blackbattleship.miguel.testsJavaDoc;
 
-import Miguel.MiguelPages.UserStory2;
+import Miguel.MiguelPages.UserStory18;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -11,44 +11,36 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * Teste automático da UserStoryTest1.
- * US2 – Iniciar novo jogo.
+ * Teste automático da UserStoryTest4.
+ * US18 – Validar acesso aos meus torneios.
  */
-public class UserStory2Test {
+public class UserStory18Test {
 
     private WebDriver driver;
 
     @Test
-    void testStartNewGame() throws InterruptedException {
+    void testTournamentAccess() throws InterruptedException {
 
         driver = new ChromeDriver();
 
         driver.manage().window().maximize();
 
-        UserStory2 page =
-                new UserStory2(driver);
+        UserStory18 page =
+                new UserStory18(driver);
 
         page.openPage();
 
         Thread.sleep(2000);
 
-        page.rejectCookies();
+        page.acceptCookies();
 
         Thread.sleep(1000);
 
-        page.clickPlay();
-
-        Thread.sleep(1000);
-
-        page.insertNickname("Miguel");
-
-        Thread.sleep(1000);
-
-        page.clickContinue();
+        page.openMyTournaments();
 
         Thread.sleep(3000);
 
-        assertTrue(page.gameStarted());
+        assertTrue(page.tournamentsPageOpened());
     }
 
     @AfterEach

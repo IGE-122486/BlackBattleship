@@ -1,8 +1,9 @@
 package pt.iscte.blackbattleship.miguel.testsJavaDoc;
 
-import Miguel.MiguelPages.UserStory4;
+import Miguel.MiguelPages.UserStory17;
 
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import org.openqa.selenium.WebDriver;
@@ -11,44 +12,45 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * Teste automático da UserStoryTest2.
- * US4 – Criar link de convite.
+ * Testes automáticos da UserStoryTest3.
+ * US17 - Validar abertura da loja no site.
  */
-public class UserStory4Test {
+public class UserStory17Test {
 
     private WebDriver driver;
+    private UserStory17 page;
 
-    @Test
-    void testInviteLink() throws InterruptedException {
+    @BeforeEach
+    void setup() {
 
         driver = new ChromeDriver();
 
         driver.manage().window().maximize();
 
-        UserStory4 page =
-                new UserStory4(driver);
+        page = new UserStory17(driver);
+    }
 
-        page.openPage();
+    /**
+     * Valida a abertura da loja.
+     */
+    @Test
+    void testOpenShop() throws InterruptedException {
+
+        page.openHomePage();
 
         Thread.sleep(2000);
 
         page.acceptCookies();
 
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
-        page.clickPlayOnline();
-
-        Thread.sleep(1000);
-
-        page.insertNickname("Miguel");
-
-        Thread.sleep(1000);
-
-        page.clickContinue();
+        page.openShop();
 
         Thread.sleep(3000);
 
-        assertTrue(page.inviteCreated());
+        assertTrue(page.isShopPageOpened());
+
+        assertTrue(page.isCoinsButtonVisible());
     }
 
     @AfterEach

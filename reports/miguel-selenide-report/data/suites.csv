@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","8976","testTournamentAccess()","","2026-05-12","passed","2026-05-12","","pt.iscte.blackbattleship.miguel.selenide.tests.UserStory18SelenideTest","pt.iscte.blackbattleship.miguel.selenide.tests.UserStory18SelenideTest","testTournamentAccess"
+"","8115","testStartNewGame()","","2026-05-12","passed","2026-05-12","","pt.iscte.blackbattleship.miguel.selenide.tests.UserStory2SelenideTest","pt.iscte.blackbattleship.miguel.selenide.tests.UserStory2SelenideTest","testStartNewGame"
+"","10416","testInviteLink()","","2026-05-12","passed","2026-05-12","","pt.iscte.blackbattleship.miguel.selenide.tests.UserStory4SelenideTest","pt.iscte.blackbattleship.miguel.selenide.tests.UserStory4SelenideTest","testInviteLink"
+"","10307","testOpenShop()","","2026-05-12","passed","2026-05-12","","pt.iscte.blackbattleship.miguel.selenide.tests.UserStory17SelenideTest","pt.iscte.blackbattleship.miguel.selenide.tests.UserStory17SelenideTest","testOpenShop"
