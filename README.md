@@ -25,3 +25,5 @@
 14. Como jogador, quero que o sistema impeça o início do jogo sem inserir um nickname, para garantir que todos os jogadores são identificados.
 15. Como jogador, quero voltar à página inicial a partir do jogo, para poder reiniciar ou escolher outro modo de jogo.
 16. Como jogador, quero navegar entre diferentes páginas do jogo, para aceder facilmente às funcionalidades.
+17. Como jogador, quero validar o acesso aos meus torneios, para garantir que apenas utilizadores autorizados conseguem consultá-los.
+18. Como jogador, quero que o sistema valide a abertura da loja no site, para garantir que os produtos só ficam disponíveis quando a loja estiver ativa.
