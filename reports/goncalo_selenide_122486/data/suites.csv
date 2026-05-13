@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","10725","validateValidNicknameTest()","","2026-05-13","passed","2026-05-13","","pt.iscte.blackbattleship.goncalo.selenide.tests.UserStory13SelenideTest","pt.iscte.blackbattleship.goncalo.selenide.tests.UserStory13SelenideTest","validateValidNicknameTest"
+"","9001","returnToHomePageTest()","","2026-05-13","passed","2026-05-13","","pt.iscte.blackbattleship.goncalo.selenide.tests.UserStory15SelenideTest","pt.iscte.blackbattleship.goncalo.selenide.tests.UserStory15SelenideTest","returnToHomePageTest"
+"","10153","validateEmptyNicknameTest()","","2026-05-13","passed","2026-05-13","","pt.iscte.blackbattleship.goncalo.selenide.tests.UserStory14SelenideTest","pt.iscte.blackbattleship.goncalo.selenide.tests.UserStory14SelenideTest","validateEmptyNicknameTest"
+"","24038","navigationBetweenPagesTest()","","2026-05-13","passed","2026-05-13","","pt.iscte.blackbattleship.goncalo.selenide.tests.UserStory16SelenideTest","pt.iscte.blackbattleship.goncalo.selenide.tests.UserStory16SelenideTest","navigationBetweenPagesTest"
