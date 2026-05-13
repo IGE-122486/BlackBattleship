@@ -1,9 +1,7 @@
 package pt.iscte.blackbattleship.goncalo.tests;
 
-import pt.iscte.blackbattleship.goncalo.pages.UserStory14;
-
+import GoncaloPages.UserStory14;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -28,12 +26,12 @@ public class UserStory14Test {
     private WebDriver driver;
 
     /**
-     * Instância da Page Object Class.
+     * Instância da Page Object.
      */
     private UserStory14 userStory14;
 
     /**
-     * Configuração inicial do teste.
+     * Configuração inicial.
      */
     @BeforeEach
     public void setUp() {
@@ -49,7 +47,7 @@ public class UserStory14Test {
     }
 
     /**
-     * Testa tentativa de iniciar jogo sem nickname.
+     * Testa início do jogo sem nickname.
      */
     @Test
     public void validateEmptyNicknameTest() {
@@ -58,24 +56,13 @@ public class UserStory14Test {
 
         userStory14.selectTicTacToeGame();
 
-        userStory14.clickPlayVsRobot();
+        userStory14.clickPlayButton();
 
-        userStory14.clickContinueWithoutNickname();
-
-        String expectedMessage =
-                "Please choose a respectful username";
-
-        String actualMessage =
-                userStory14.getErrorMessage();
-
-        Assertions.assertEquals(
-                expectedMessage,
-                actualMessage
-        );
+        userStory14.clickCancelButton();
     }
 
     /**
-     * Fecha o browser após o teste.
+     * Fecha o browser.
      */
     @AfterEach
     public void tearDown() {

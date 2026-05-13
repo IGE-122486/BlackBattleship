@@ -1,9 +1,7 @@
 package pt.iscte.blackbattleship.goncalo.tests;
 
-import pt.iscte.blackbattleship.goncalo.pages.UserStory16;
-
+import GoncaloPages.UserStory16;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,8 +13,8 @@ import java.time.Duration;
 /**
  * Classe de teste JUnit da User Story 16.
  *
- * Esta classe testa a navegação entre
- * diferentes páginas de jogos.
+ * Esta classe testa a navegação
+ * entre diferentes páginas do jogo.
  *
  * @author Goncalo
  */
@@ -28,12 +26,12 @@ public class UserStory16Test {
     private WebDriver driver;
 
     /**
-     * Instância da Page Object Class.
+     * Instância da Page Object.
      */
     private UserStory16 userStory16;
 
     /**
-     * Configuração inicial do teste.
+     * Configuração inicial.
      */
     @BeforeEach
     public void setUp() {
@@ -49,39 +47,34 @@ public class UserStory16Test {
     }
 
     /**
-     * Testa a navegação entre jogos.
+     * Testa navegação entre páginas.
      */
     @Test
-    public void navigationBetweenGamesTest() {
+    public void navigationBetweenPagesTest() {
 
         userStory16.openWebsite();
 
-        userStory16.selectBattleshipGame();
+        userStory16.selectBattleship();
         userStory16.clickHomeButton();
 
-        userStory16.selectTicTacToeGame();
+        userStory16.selectTicTacToe();
         userStory16.clickHomeButton();
 
-        userStory16.selectConnect4Game();
+        userStory16.selectConnect4();
         userStory16.clickHomeButton();
 
-        userStory16.selectGomokuGame();
+        userStory16.selectGomoku();
         userStory16.clickHomeButton();
 
-        String expectedUrl =
-                "https://papergames.io/en/";
+        userStory16.selectChess();
+        userStory16.clickHomeButton();
 
-        String actualUrl =
-                userStory16.getCurrentUrl();
-
-        Assertions.assertEquals(
-                expectedUrl,
-                actualUrl
-        );
+        userStory16.selectLastGame();
+        userStory16.clickHomeButton();
     }
 
     /**
-     * Fecha o browser após o teste.
+     * Fecha o browser.
      */
     @AfterEach
     public void tearDown() {

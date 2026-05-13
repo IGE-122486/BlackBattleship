@@ -3,23 +3,23 @@ package pt.iscte.blackbattleship.goncalo.selenide.tests;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import pt.iscte.blackbattleship.goncalo.selenide.pages.UserStory14Selenide;
+import pt.iscte.blackbattleship.goncalo.selenide.pages.UserStory13Selenide;
 
 /**
- * Classe de teste Selenide da User Story 14.
+ * Classe de teste Selenide da User Story 13.
  *
- * Esta classe testa o impedimento
- * do início do jogo sem nickname.
+ * Esta classe testa a validação
+ * de nickname com Selenide.
  *
  * @author Goncalo
  */
-public class UserStory14SelenideTest {
+public class UserStory13SelenideTest {
 
     /**
      * Instância da Page Object.
      */
-    private final UserStory14Selenide page =
-            new UserStory14Selenide();
+    private final UserStory13Selenide page =
+            new UserStory13Selenide();
 
     /**
      * Configuração inicial.
@@ -33,17 +33,19 @@ public class UserStory14SelenideTest {
     }
 
     /**
-     * Testa início do jogo sem nickname.
+     * Testa nickname válido.
      */
     @Test
-    public void validateEmptyNicknameTest() {
+    public void validateValidNicknameTest() {
 
         page.openWebsite();
 
-        page.selectTicTacToeGame();
+        page.selectBattleshipGame();
 
-        page.clickPlayButton();
+        page.clickPlayVsRobot();
 
-        page.clickCancelButton();
+        page.enterNickname("Goncalo123");
+
+        page.clickContinue();
     }
 }
